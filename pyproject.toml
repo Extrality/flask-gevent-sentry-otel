@@ -1,0 +1,29 @@
+
+[project]
+name = "super_api"
+version = "1.0.0"
+description = "Sentry issue"
+requires-python = ">=3.12"
+classifiers = ["Private :: Do Not Upload"]
+
+dependencies = [
+    "flask ~= 3.0",
+    "flask-smorest ~= 0.44.0",
+    "gunicorn[gevent] ~= 23.0",
+    "opentelemetry-api ~= 1.26",
+    "opentelemetry-exporter-otlp ~= 1.26",
+    "opentelemetry-instrumentation-botocore ~= 0.47b0",
+    "opentelemetry-instrumentation-flask ~= 0.47b0",
+    "opentelemetry-instrumentation-logging ~= 0.47b0",
+    "opentelemetry-instrumentation-redis ~= 0.47b0",
+    "opentelemetry-instrumentation-requests ~= 0.47b0",
+    "opentelemetry-instrumentation-sqlalchemy ~= 0.47b0",
+    "opentelemetry-instrumentation-urllib ~= 0.47b0",
+    "pydantic-settings ~= 2.4",
+    "python-json-logger>=2.0.7",
+    "sentry-sdk[opentelemetry] ~= 2.13",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
