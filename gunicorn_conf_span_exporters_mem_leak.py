@@ -44,6 +44,8 @@ def post_worker_init(worker):
         traces_sample_rate=1.0,
         instrumenter="otel",
     )
+
+    # These are called multiple times on a single OTeL tracer, it doesn't look like it should work !
     tracer_provider = trace.get_tracer_provider()
     tracer_provider.add_span_processor(SentrySpanProcessor())
     set_global_textmap(SentryPropagator())
